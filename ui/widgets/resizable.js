@@ -704,7 +704,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		var prel,
 			i = 0,
 			element = this.helper || this.element;
-
+	setTimeout(function(){
 		for ( ; i < this._proportionallyResizeElements.length; i++ ) {
 
 			prel = this._proportionallyResizeElements[ i ];
@@ -721,6 +721,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 			} );
 
 		}
+	}, 20);
 
 	},
 
